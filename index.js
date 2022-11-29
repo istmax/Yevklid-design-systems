@@ -1,12 +1,11 @@
 // SWIPER-HERO
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiper-container", {
   loop: true,
-  spaceBetween: 80,
+  spaceBetween: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    type: "bullets",
   },
 });
 
@@ -63,22 +62,12 @@ menuItems.forEach(function (menuItem) {
 
 const searchButton = document.querySelector(".button-search");
 const searchDisplay = document.querySelector(".header__search");
-const headerLogo = document.querySelector(".header__logo");
 const closeIcon = document.querySelector(".close-icon");
-const headerMenu = document.querySelector(".header-menu");
 
 searchButton.addEventListener("click", function () {
-  searchButton.style.display = "none";
-  headerMenu.style.display = "none";
-  searchDisplay.style.opacity = "1";
-  searchDisplay.style.transform = "translateX(0)";
-  searchDisplay.style.transition = "transform .3s ease-in-out, opacity .3s ease-in-out";
+  searchDisplay.classList.add("header-search--active");
 });
 
 closeIcon.addEventListener("click", function () {
-  searchButton.style.display = "block";
-  headerMenu.style.display = "block";
-  searchDisplay.style.opacity = "0";
-  searchDisplay.style.transform = "translateX(100%)";
-  searchDisplay.style.transition = "transform .3s ease-in-out, opacity .3s ease-in-out";
+  searchDisplay.classList.remove("header-search--active");
 });
