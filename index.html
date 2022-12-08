@@ -39,13 +39,13 @@
             <a class="burger-item" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <button class="burger-button">
+        <button class="burger-button" aria-label="Кнопка меню">
           <span class="bar-top"></span>
           <span class="bar-center"></span>
           <span class="bar-bottom"></span>
         </button>
-        <div class="header__logo">
-          <a href="#" class="link"><img src="img/header_logo.svg" alt=""> </a>
+        <div class="header__logo" aria-hidden="true">
+          <a href="#" class="link" aria-hidden="true"><img src="img/header_logo.svg" alt="Логотип Евклид проектные системы"></a>
         </div>
         <div class="header-menu">
           <ul class="header__list">
@@ -66,13 +66,14 @@
             </li>
           </ul>
         </div>
-        <button class="button-search">
+        <button class="button-search" aria-label="Открыть меню поиска">
           <svg
             class="search-svg"
             width="24"
             height="24"
             viewbox="0 0 25 25"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <rect
               width="7.56126"
@@ -85,13 +86,13 @@
             />
           </svg>
         </button>
-        <form class="header__search">
+        <form class="header__search" aria-label="Меню поиска" aria-hidden="true">
           <input
             class="input-search"
             type="text"
             placeholder="Что будем искать?"
           >
-          <button type="submit">
+          <button aria-label="Найти">
             <svg
               width="24"
               height="24"
@@ -113,7 +114,7 @@
               />
             </svg>
           </button>
-          <button class="close-icon" type="button">
+          <button class="close-icon" aria-label="Закрыть поиск">
             <svg
               class="close-icon-svg"
               width="24"
@@ -151,7 +152,8 @@
           <div class="swiper-slide" style="background-image: url(./img/hero__2.jpg);"></div>
           <div class="swiper-slide" style="background-image: url(./img/hero__3.jpg);"></div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination">
+        </div>
       </div>
         <div class="hero__content">
           <h1 class="heading">Проектные решения любой сложности</h1>
@@ -339,7 +341,7 @@
           </div>
         </div>
       </section>
-      <section class="questions" id="projects">
+      <section class="questions" id="#">
         <div class="container">
           <h2 class="title title-questions">Часто задаваемые вопросы</h2>
           <ul class="questions-list accordion-list">
@@ -591,11 +593,11 @@
         </div>
       </section>
     </main>
-    <footer class="footer" id="contacts">
+    <footer class="footer">
       <div class="container footer-flex">
         <div class="footer__navigation">
-          <a href="#" class="link">
-            <img class="footer-logo" src="img/footer__logo.svg" alt="">
+          <a href="#" class="link" aria-hidden="true">
+            <img class="footer-logo" src="img/footer__logo.svg" alt="Логотип Евклид проектные системы">
           </a>
           <ul class="footer__navigation__list">
             <li class="footer__navigation__element">

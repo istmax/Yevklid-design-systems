@@ -95,6 +95,7 @@ img {
 .header__bar {
   display: flex;
   position: relative;
+  height: 90px;
   align-items: center;
   justify-content: space-between;
 }
@@ -142,7 +143,7 @@ img {
   padding: 10px 13px 16px 32px;
   opacity: 0;
   position: absolute;
-  top: 6px;
+  top: 15px;
   right: 0px;
   width: 540px;
   height: 60px;
@@ -713,9 +714,17 @@ img {
   fill: #FF9900;
 }
 
+.accordion__control:focus .questions-svg {
+  fill: #FF9900;
+}
+
 .accordion__control:hover .questions-svg .questions-svg-inner {
   fill: #FFFFFF;
   transition: fill .1s ease-in-out;
+}
+
+.accordion__control:focus .questions-svg .questions-svg-inner {
+  fill: #FFFFFF;
 }
 
 .accordion--active .accordion__control .questions-svg {
@@ -726,6 +735,10 @@ img {
 .accordion__control:hover:first-child {
   color:#FF9900;
   transition: color .3s ease-in-out;
+}
+
+.accordion__control:focus:first-child {
+  color:#FF9900;
 }
 
 .questions-list__element {
@@ -740,6 +753,11 @@ img {
   border-bottom: 1px solid #FF9900;
   border-top: 1px solid #FF9900;
   transition: border .3s ease-in-out;
+}
+
+.questions-list__element:focus {
+  border-bottom: 1px solid #FF9900;
+  border-top: 1px solid #FF9900;
 }
 
 .accordion__content {
@@ -963,13 +981,21 @@ label {
   color: #CACACA;
 }
 
+label:hover {
+  color: #FFFFFF;
+}
+
+label:focus {
+  border: 1px solid #FF9900;
+}
+
 #check {
-  display: none;
+  appearance: none;
 }
 
 #check + span {
   position: absolute;
-  top: 7px;
+  top: 9px;
   left: -4px;
   width: 14px;
   height: 14px;
